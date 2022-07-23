@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/_10mdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/_8mdp">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/rv_imageView_story"
+        android:layout_width="@dimen/_130mdp"
+        android:layout_height="@dimen/_85mdp"
+        android:scaleType="center"
+        android:src="@drawable/femalemodel"
+        app:riv_corner_radius="@dimen/_15mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:foreground="@color/shades"
+        app:riv_mutate_background="false" />
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+
+        android:layout_width="@dimen/_30mdp"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        android:padding="4dp"
+        android:src="@mipmap/ic_launcher"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/rv_imageView_story"
+        app:layout_constraintTop_toTopOf="@id/rv_imageView_story" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/view_circle_white"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:background="@drawable/live"
+        android:id="@+id/story_type"
+        app:layout_constraintEnd_toEndOf="@+id/rv_imageView_story"
+        app:layout_constraintTop_toTopOf="@id/rv_imageView_story"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_4mdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anonymous"
+        android:id="@+id/rv_story_username"
+        android:textColor="@color/white"
+        android:background="@color/shades"
+        app:layout_constraintBottom_toBottomOf="@id/rv_imageView_story"
+        app:layout_constraintStart_toStartOf="@id/rv_imageView_story"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/_12font_mdp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
