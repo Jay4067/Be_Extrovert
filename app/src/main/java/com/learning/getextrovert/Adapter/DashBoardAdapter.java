@@ -15,6 +15,8 @@ import com.learning.getextrovert.R;
 
 import java.util.List;
 
+//On HomeFragment
+
 public class DashBoardAdapter extends RecyclerView.Adapter<DashBoardAdapter.viewHolder> {
 
     List<DashBoard> dashboardPostlist;

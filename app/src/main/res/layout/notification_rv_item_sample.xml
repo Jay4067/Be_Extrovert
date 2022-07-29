@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_notification"
+
+        android:layout_width="@dimen/_50mdp"
+        android:layout_height="@dimen/_50mdp"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:src="@mipmap/ic_launcher"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/view_circle"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image_notification"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image_notification"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profile_image_notification"
+        app:layout_constraintTop_toTopOf="@+id/profile_image_notification"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@id/tv_notification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="8dp"
+        android:text="Notification about mentioning you in a comment"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14mdp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image_notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profile_image_notification"
+        app:layout_constraintTop_toTopOf="@id/profile_image_notification"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/tv_time_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="just now"
+        app:layout_constraintTop_toBottomOf="@id/tv_notification"
+        app:layout_constraintStart_toStartOf="@id/tv_notification"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
